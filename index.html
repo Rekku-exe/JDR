@@ -2,25 +2,75 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Rekku.exe - JDR</title>
-        <link rel="icon" href="../../common/img/icon/home_x1.png"/>
+        <title>JDR</title>
         <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     </head>
     <body>
         <header>
-            <a id="linklogo" href="../../index.html"><img id="logo" src="../../common/img/D.png"></a>
-            <p id="version">
-                v0.0.1
-            </p>
         </header>
         <main id="main">
-            <div id="land"></div>
+            <div id="entity_list">
+                <div>
+                    <h3>Alliés</h3>
+                    <ul></ul>
+                    <button>Ajouter un allié</button>
+                </div>
+                <div id="entity_list_devider"></div>
+                <div>
+                    <h3>Ennemis</h3>
+                    <ul></ul>
+                    <button>Ajouter un ennemi</button>
+                </div>
+            </div>
+
+            <div id="map"></div>
+
+            <div id="chat_box">
+                <div id="chat_box_chat">
+                    <button>?</button>
+                </div>
+                <input type="text" placeholder="Écrivez ici" />
+            </div>
+
+            <div id="board">
+                <div>
+                    <div>
+                        <button>Créer une map</button>
+                        <button>Ajouter une entité</button>
+                        <button>Poser des blocs</button>
+                    </div>
+                    <div>
+                        <button>Mode d'affichage</button>
+                        <button>Mode de curseur</button>
+                        <button>Autres fonctionnalités</button>
+                    </div>
+                </div>
+                <div id="board_devider"></div>
+                <div>
+                    <div>
+                        <button>Lancer un dés 20</button>
+                        <button>Lancer un dés 100</button>
+                        <button>Lancer un dés custom</button>
+                    </div>
+                    <div>
+                        <p>Lancer plusieurs dés</p>
+                        <div>
+                            <button><input type="text" /></button>
+                            <button><input type="text" /></button>
+                            <button><input type="text" /></button>
+                            <button><input type="text" /></button>
+                        </div>
+                        <button>Lancer</button>
+                    </div>
+                </div>
+            </div>
+            <!--div id="land"></div>
             <div id="console"></div>
             <input id="typer" type="text"></input>
-            <input id="loader" type="file" onchange="loadFile(this.value)" ></input>
+            <input id="loader" type="file" onchange="loadFile(this.value)" ></input-->
         </main>
         <footer>
-            <p id="copyright">© Rekku</p>
+            <p id="copyright">Rekkou & Mathieu</p>
         </footer>
         <script src="./js/script.js"></script>
     </body>

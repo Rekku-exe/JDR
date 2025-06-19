@@ -9,65 +9,85 @@
         <header>
         </header>
         <main id="main">
-            <div id="entity_list">
-                <div>
+            <div class="container --small" id="entity_list">
+                <div class="entity_group entity_ally">
                     <h3>Alliés</h3>
-                    <ul></ul>
-                    <button>Ajouter un allié</button>
+                    <ul>
+                        <li>
+                            <i>V</i>
+                            <h4>Simon</h4>
+                            <div class="entity_stats player_stats">
+                                <div class="entity_stat player_stat">
+                                    PV
+                                    <span class="entity_stat_bar player_stat_bar"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button>Ajouter un allié</button>
+                        </li>
+                    </ul>
                 </div>
-                <div id="entity_list_devider"></div>
-                <div>
+                <hr>
+                <div class="entity_group entity_enemy">
                     <h3>Ennemis</h3>
-                    <ul></ul>
-                    <button>Ajouter un ennemi</button>
+                    <ul>
+                        <li>
+                            <i>V</i>
+                            <h4>Orc à épée</h4>
+                        </li>
+                        <li>
+                            <button>Ajouter un allié</button>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div id="map"></div>
+            <div class="container --big" id="map"></div>
 
-            <div id="chat_box">
+            <div class="container --big" id="chat_box">
                 <div id="chat_box_chat">
-                    <button>?</button>
+                    <button class="chat_box_help">?</button>
                 </div>
                 <input type="text" placeholder="Écrivez ici" />
+                <label for="chat_file">
+                    <i>+</i>
+                    <input name="chat_file" type="file" name="" id="">
+                </label>
             </div>
 
-            <div id="board">
-                <div>
-                    <div>
+            <div class="container --small" id="utilities">
+                <div class="utilities_bloc">
+                    <div class="utilities_col">
                         <button>Créer une map</button>
                         <button>Ajouter une entité</button>
                         <button>Poser des blocs</button>
                     </div>
-                    <div>
+                    <div class="utilities_bloc">
                         <button>Mode d'affichage</button>
                         <button>Mode de curseur</button>
                         <button>Autres fonctionnalités</button>
                     </div>
                 </div>
-                <div id="board_devider"></div>
-                <div>
-                    <div>
+                <hr>
+                <div class="utilities_bloc">
+                    <div class="utilities_col">
                         <button>Lancer un dés 20</button>
                         <button>Lancer un dés 100</button>
                         <button>Lancer un dés custom</button>
                     </div>
-                    <div>
+                    <div class="utilities_col">
                         <p>Lancer plusieurs dés</p>
-                        <div>
-                            <button><input type="text" /></button>
-                            <button><input type="text" /></button>
-                            <button><input type="text" /></button>
-                            <button><input type="text" /></button>
+                        <div class="utilities_multiple_dice">
+                            <button><input type="number" /></button>
+                            <button><input type="number" /></button>
+                            <button><input type="number" /></button>
+                            <button><input type="number" /></button>
                         </div>
                         <button>Lancer</button>
                     </div>
                 </div>
             </div>
-            <!--div id="land"></div>
-            <div id="console"></div>
-            <input id="typer" type="text"></input>
-            <input id="loader" type="file" onchange="loadFile(this.value)" ></input-->
         </main>
         <footer>
             <p id="copyright">Rekkou & Mathieu</p>

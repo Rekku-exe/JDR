@@ -1,0 +1,115 @@
+#main {
+    //
+    // Var
+    $c-primary: #76AC43;
+    $c-primary-darker: #679B36;
+    $c-black: #121214;
+    $c-darker: #1A1A1E;
+    $c-dark: #222327;
+    $c-grey: #AAAAB1;
+    $c-light: #EDEAEA;
+    $c-white: #f7f7f7;
+    $c-health: #D9433D;
+    $c-armor: #AFFFE0;
+    $c-mana: #00D8FF;
+    
+    
+    //
+    // Common
+    .container {
+        &.--big {
+
+        }
+        &.--small {
+
+        }
+    }
+    .btn {
+        &--primary {
+
+        }
+        &--secondary {
+            
+        }
+    }
+
+    // 
+    // Entity list
+    #entity_list {
+        .entity_group {
+            &.entity_ally {
+
+            }
+            &.entity_enemy {
+
+            }
+
+            h3 {
+                
+            }
+            ul {
+                li {
+                    i {
+
+                    }
+                    h4 {
+
+                    }
+                    .entity_stats {
+                        .entity_stat {
+                            .entity_stat_bar {
+
+                            }
+                        }
+                    }
+
+                    button {
+
+                    }
+                }
+            }
+        }
+    }
+
+    // 
+    // Map
+    #map {
+
+    }
+
+    // 
+    // Chat box
+    #chat_box {
+        #chat_box_chat {
+            .chat_box_help {
+
+            }
+        }
+        input[type=text] {
+
+        }
+        label {
+            i {
+
+            }
+            input[type=file] {
+
+            }
+        }
+    }
+
+    // 
+    // Utilities
+    #utilities {
+        .utilities_bloc {
+            .utilities_col {
+                button {
+
+                }
+            }
+        }
+        hr {
+
+        }
+    }
+}

@@ -17,15 +17,21 @@
                             <i>V</i>
                             <h4>Simon</h4>
                             <div class="entity_stats player_stats">
-                                <div class="entity_stat player_stat">
+                                <div class="entity_stat player_stat --health">
                                     PV
+                                    <span class="entity_stat_bar player_stat_bar"></span>
+                                </div>
+                                <div class="entity_stat player_stat --armor">
+                                    Armor
+                                    <span class="entity_stat_bar player_stat_bar"></span>
+                                </div>
+                                <div class="entity_stat player_stat --mana">
+                                    Mana
                                     <span class="entity_stat_bar player_stat_bar"></span>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <button>Ajouter un allié</button>
-                        </li>
+                        <button class="btn btn--secondary">Ajouter un allié</button>
                     </ul>
                 </div>
                 <hr>
@@ -36,9 +42,7 @@
                             <i>V</i>
                             <h4>Orc à épée</h4>
                         </li>
-                        <li>
-                            <button>Ajouter un allié</button>
-                        </li>
+                        <button class="btn btn--secondary">Ajouter un allié</button>
                     </ul>
                 </div>
             </div>
@@ -59,32 +63,32 @@
             <div class="container --small" id="utilities">
                 <div class="utilities_bloc">
                     <div class="utilities_col">
-                        <button>Créer une map</button>
-                        <button>Ajouter une entité</button>
-                        <button>Poser des blocs</button>
+                        <button class="btn btn--secondary">Créer une map</button>
+                        <button class="btn btn--secondary">Ajouter une entité</button>
+                        <button class="btn btn--secondary">Poser des blocs</button>
                     </div>
-                    <div class="utilities_bloc">
-                        <button>Mode d'affichage</button>
-                        <button>Mode de curseur</button>
-                        <button>Autres fonctionnalités</button>
+                    <div class="utilities_col">
+                        <button class="btn btn--secondary">Mode d'affichage</button>
+                        <button class="btn btn--secondary">Mode de curseur</button>
+                        <button class="btn btn--secondary">Autres fonctionnalités</button>
                     </div>
                 </div>
                 <hr>
                 <div class="utilities_bloc">
                     <div class="utilities_col">
-                        <button>Lancer un dés 20</button>
-                        <button>Lancer un dés 100</button>
-                        <button>Lancer un dés custom</button>
+                        <button class="btn btn--secondary">Lancer un dés 20</button>
+                        <button class="btn btn--secondary">Lancer un dés 100</button>
+                        <button class="btn btn--secondary">Lancer un dés custom</button>
                     </div>
                     <div class="utilities_col">
                         <p>Lancer plusieurs dés</p>
                         <div class="utilities_multiple_dice">
-                            <button><input type="number" /></button>
-                            <button><input type="number" /></button>
-                            <button><input type="number" /></button>
-                            <button><input type="number" /></button>
+                            <input type="number" value="4"/>
+                            <input type="number" value="4"/>
+                            <input type="number" value="4"/>
+                            <button id="add-dice">+</button>
                         </div>
-                        <button>Lancer</button>
+                        <button class="btn btn--primary">Lancer</button>
                     </div>
                 </div>
             </div>

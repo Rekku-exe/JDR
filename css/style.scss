@@ -4,47 +4,79 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
+ //
+// Var
+$c-primary: #76AC43;
+$c-primary-darker: #679B36;
+$c-black: #121214;
+$c-darker: #1A1A1E;
+$c-dark: #222327;
+$c-grey: #AAAAB1;
+$c-light: #EDEAEA;
+$c-white: #f7f7f7;
+$c-health: #D9433D;
+$c-armor: #AFFFE0;
+$c-mana: #00D8FF;
+$b-radius: 10px;
+$b-radius-large: 15px;
+$s-container: 30px; // Container spacing
+$s-intern: 15px; // Container inner spacing
+
+
 #main {
-    //
-    // Var
-    $c-primary: #76AC43;
-    $c-primary-darker: #679B36;
-    $c-black: #121214;
-    $c-darker: #1A1A1E;
-    $c-dark: #222327;
-    $c-grey: #AAAAB1;
-    $c-light: #EDEAEA;
-    $c-white: #f7f7f7;
-    $c-health: #D9433D;
-    $c-armor: #AFFFE0;
-    $c-mana: #00D8FF;
-    
-    
+    display: flex;
+    flex-wrap: wrap;
+    padding: $s-container;
+    gap: $s-container;
+    justify-content: space-between;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: $c-black;
     //
     // Common
     .container {
+        background-color: $c-darker;
+        border-radius: $b-radius-large;
+        height: calc(50vh - ($s-container * 2));
+        padding: $s-intern;
         &.--big {
-
+            width: calc(65vw - ($s-container * 2));
         }
         &.--small {
-
+            width: calc(35vw - ($s-container * 2));
         }
     }
     .btn {
+        appearance: none;
+        border-radius: $b-radius;
+        box-shadow: none;
+        border: none;
+        font-size: 1rem;
+        padding: 10px 5px;
         &--primary {
-
+            background-color: $c-primary;
+            color: $c-white;
         }
         &--secondary {
-            
+            background-color: $c-dark;
+            color: $c-light;
         }
     }
 
     // 
     // Entity list
     #entity_list {
+        display: flex;
+        flex-direction: row;
+        gap: $s-intern;
         .entity_group {
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - $s-intern);
+            gap: $s-intern;
             &.entity_ally {
 
             }
@@ -53,20 +85,48 @@
             }
 
             h3 {
-                
+                font-size: 1.5rem;
+                color: $c-white;
             }
             ul {
+                display: flex;
+                flex-direction: column;
+                gap: $s-intern;
                 li {
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: $c-dark;
+                    border-radius: $b-radius;
+                    padding: $s-intern / 2;
                     i {
-
+                        width: 20px;
+                        height: 20px;
+                        background-color: $c-primary;
+                        margin-right: $s-intern / 2;
                     }
                     h4 {
-
+                        color: $c-white;
+                        font-weight: 500;
                     }
                     .entity_stats {
+                        width: 100%;
                         .entity_stat {
+                            display: flex;
+                            flex-direction: column;
                             .entity_stat_bar {
+                                position: relative;
+                                height: 4px;
+                                border-radius: 4px;
+                                width: 100%;
+                                &.--health {
 
+                                }
+                                &.--armor {
+
+                                }
+                                &.--mana {
+
+                                }
                             }
                         }
                     }
@@ -75,6 +135,11 @@
 
                     }
                 }
+            }
+            hr {
+                height: 100%;
+                border-bottom: none;
+                background-color: $c-white;
             }
         }
     }
@@ -110,14 +175,61 @@
     // Utilities
     #utilities {
         .utilities_bloc {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: $s-intern;
             .utilities_col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: $s-intern;
+                width: calc(50% - ($s-intern / 2));
                 button {
+                    width: 100%;
+                }
 
+                .utilities_multiple_dice {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 8px;
+                    input {
+                        height: 32px;
+                        width: 32px;
+                        border: 2px solid $c-grey;
+                        background-color: $c-grey;
+                        border-radius: $b-radius;
+                        text-align: center;
+                        color: $c-black;
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                        &:focus {
+                            outline: none;
+                            border: 2px solid $c-light;
+                        }
+                    }
+                    button {
+                        height: 32px;
+                        width: 32px;
+                        border: 2px solid;
+                        border: 2px solid $c-grey;
+                        background-color: transparent;
+                        border-radius: $b-radius;
+                        text-align: center;
+                        color: $c-white;
+                    }
                 }
             }
         }
-        hr {
 
+        p {
+            color: $c-white;
+        }
+        hr {
+            margin: $s-intern $s-container;
         }
     }
 }

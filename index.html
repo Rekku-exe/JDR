@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                         </li>
-                        <button class="btn btn--secondary">Ajouter un allié</button>
+                        <button class="btn btn--secondary" onclick="addAlly()">Ajouter un allié</button>
                     </ul>
                 </div>
                 <hr>
@@ -42,7 +42,7 @@
                             <i>V</i>
                             <h4>Orc à épée</h4>
                         </li>
-                        <button class="btn btn--secondary">Ajouter un allié</button>
+                        <button class="btn btn--secondary" onclick="addEnemy()">Ajouter un allié</button>
                     </ul>
                 </div>
             </div>
@@ -76,8 +76,8 @@
                 <hr>
                 <div class="utilities_bloc">
                     <div class="utilities_col">
-                        <button class="btn btn--secondary">Lancer un dés 20</button>
-                        <button class="btn btn--secondary">Lancer un dés 100</button>
+                        <button class="btn btn--secondary" onclick="roll('d20')">Lancer un dés 20</button>
+                        <button class="btn btn--secondary" onclick="roll('d100')">Lancer un dés 100</button>
                         <button class="btn btn--secondary">Lancer un dés custom</button>
                     </div>
                     <div class="utilities_col">
@@ -86,9 +86,9 @@
                             <input type="number" value="4"/>
                             <input type="number" value="4"/>
                             <input type="number" value="4"/>
-                            <button id="add-dice">+</button>
+                            <button id="add-dice" onclick="addDice()">+</button>
                         </div>
-                        <button class="btn btn--primary">Lancer</button>
+                        <button class="btn btn--primary" onclick="rollForm()">Lancer</button>
                     </div>
                 </div>
             </div>
@@ -96,6 +96,7 @@
         <footer>
             <p id="copyright">Rekkou & Mathieu</p>
         </footer>
+        <script src="./js/Player.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

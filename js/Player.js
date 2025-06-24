@@ -20,35 +20,10 @@ class Player {
     }
 
     toDom() {
-        const li = document.createElement('li');
         if ('enemy' == this.type) {
-            li.innerHTML = 
-                `<h4>
-                    <i>V</i>
-                    ${this.name}
-                </h4>`
+            return renderVDom(enemyDom(this.name));
         } else {
-            li.innerHTML =
-                `
-                <h4>
-                    <i>V</i>
-                    ${this.name}
-                </h4>
-                 <div class="entity_stats player_stats">
-                    <div class="entity_stat player_stat">
-                        <span class="entity_stat_label player_stat_label">PV</span>
-                        <span class="entity_stat_bar player_stat_bar --health"></span>
-                    </div>
-                    <div class="entity_stat player_stat">
-                        <span class="entity_stat_label player_stat_label">Armor</span>
-                        <span class="entity_stat_bar player_stat_bar --armor"></span>
-                    </div>
-                    <div class="entity_stat player_stat">
-                        <span class="entity_stat_label player_stat_label">Mana</span>
-                        <span class="entity_stat_bar player_stat_bar --mana"></span>
-                    </div>
-                </div>`
+            return renderVDom(allyDom(this.name));
         }
-        return li;
     }
 }

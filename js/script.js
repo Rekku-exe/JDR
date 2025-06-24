@@ -1,6 +1,18 @@
 const allies = [];
 const enemies = [];
 
+const chat_box = document.getElementById('chat_box_chat');
+function log(printable) {
+    chat_box.innerHTML += printable + '<br />';
+}
+
+document.querySelector('#chat_box > input').addEventListener('keypress', e => {
+    if (e.key == 'Enter') {
+        log('> ' + e.srcElement.value);
+        e.srcElement.value = '';
+    }
+});
+
 function addAlly() {
     const ally = new Player('ally');
     allies.push(ally);
@@ -24,14 +36,14 @@ function removeEnemy(index) {
 }
 
 function editAlly(index, data) {
-    allies[index].name = data.name;
-    allies[index].hp = data.hp;
-    allies[index].hpMax = data.hpMax;
-    allies[index].armor = data.armor;
-    allies[index].armorMax = data.armorMax;
-    allies[index].mana = data.mana;
-    allies[index].manaMax = data.manaMax;
-    allies[index].color = data.color;
+    if (data.name) allies[index].name = data.name;
+    if (data.hp) allies[index].hp = data.hp;
+    if (data.hpMax) allies[index].hpMax = data.hpMax;
+    if (data.armor) allies[index].armor = data.armor;
+    if (data.armorMax) allies[index].armorMax = data.armorMax;
+    if (data.mana) allies[index].mana = data.mana;
+    if (data.manaMax) allies[index].manaMax = data.manaMax;
+    if (data.color) allies[index].color = data.color;
 }
 
 function randInt(min, max) {
@@ -65,7 +77,7 @@ function rollResolver(string) {
 
 function roll(string) {
     const res = rollResolver(string);
-    console.log(res);
+    log(res);
 }
 
 function rollForm() {

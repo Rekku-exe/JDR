@@ -14,20 +14,22 @@
                     <h3>Alliés</h3>
                     <ul>
                         <li>
-                            <i>V</i>
-                            <h4>Simon</h4>
+                            <h4>
+                                <i>V</i>
+                                Simon
+                            </h4>
                             <div class="entity_stats player_stats">
-                                <div class="entity_stat player_stat --health">
-                                    PV
-                                    <span class="entity_stat_bar player_stat_bar"></span>
+                                <div class="entity_stat player_stat">
+                                    <span class="entity_stat_label player_stat_label">PV</span>
+                                    <span class="entity_stat_bar player_stat_bar --health"></span>
                                 </div>
-                                <div class="entity_stat player_stat --armor">
-                                    Armor
-                                    <span class="entity_stat_bar player_stat_bar"></span>
+                                <div class="entity_stat player_stat">
+                                    <span class="entity_stat_label player_stat_label">Armor</span>
+                                    <span class="entity_stat_bar player_stat_bar --armor"></span>
                                 </div>
-                                <div class="entity_stat player_stat --mana">
-                                    Mana
-                                    <span class="entity_stat_bar player_stat_bar"></span>
+                                <div class="entity_stat player_stat">
+                                    <span class="entity_stat_label player_stat_label">Mana</span>
+                                    <span class="entity_stat_bar player_stat_bar --mana"></span>
                                 </div>
                             </div>
                         </li>
@@ -39,8 +41,10 @@
                     <h3>Ennemis</h3>
                     <ul>
                         <li>
-                            <i>V</i>
-                            <h4>Orc à épée</h4>
+                            <h4>
+                                <i>V</i>
+                                Orc à épée
+                            </h4>
                         </li>
                         <button class="btn btn--secondary" onclick="addEnemy()">Ajouter un allié</button>
                     </ul>
@@ -53,10 +57,10 @@
                 <div id="chat_box_chat">
                     <button class="chat_box_help">?</button>
                 </div>
-                <input type="text" placeholder="Écrivez ici" />
+                <input type="text" name="chat_input" placeholder="Écrivez ici" />
                 <label for="chat_file">
                     <i>+</i>
-                    <input name="chat_file" type="file" name="" id="">
+                    <input name="chat_file" type="file" id="chat_file">
                 </label>
             </div>
 
@@ -94,7 +98,7 @@
             </div>
         </main>
         <footer>
-            <p id="copyright">Rekkou & Mathieu</p>
+            <p id="copyright">Rekkou & MathieuAvec1T</p>
         </footer>
         <script src="./js/Player.js"></script>
         <script src="./js/script.js"></script>

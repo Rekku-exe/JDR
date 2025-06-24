@@ -21,8 +21,8 @@ $c-health: #D9433D;
 $c-armor: #AFFFE0;
 $c-mana: #00D8FF;
 $b-radius: 10px;
-$b-radius-large: 15px;
-$s-container: 30px; // Container spacing
+$b-radius-large: 12px;
+$s-container: 20px; // Container spacing
 $s-intern: 15px; // Container inner spacing
 
 
@@ -56,13 +56,26 @@ $s-intern: 15px; // Container inner spacing
         border: none;
         font-size: 1rem;
         padding: 10px 5px;
+        transition: all .2s ease-in-out;
+        -webkit-box-shadow: 0px 0px 0px 0px $c-grey; 
+        box-shadow: 0px 0px 0px 0px $c-grey;
         &--primary {
             background-color: $c-primary;
             color: $c-white;
+            &:hover {
+                background-color: $c-primary-darker;
+                cursor: pointer;
+            }
         }
         &--secondary {
             background-color: $c-dark;
             color: $c-light;
+            &:hover {
+                background-color: $c-dark;
+                cursor: pointer;
+                -webkit-box-shadow: 0px 0px 5px -2px $c-grey; 
+                box-shadow: 0px 0px 5px -2px $c-grey;
+            }
         }
     }
 
@@ -98,34 +111,46 @@ $s-intern: 15px; // Container inner spacing
                     background-color: $c-dark;
                     border-radius: $b-radius;
                     padding: $s-intern / 2;
-                    i {
-                        width: 20px;
-                        height: 20px;
-                        background-color: $c-primary;
-                        margin-right: $s-intern / 2;
-                    }
                     h4 {
+                        display: flex;
+                        align-items: center;
                         color: $c-white;
                         font-weight: 500;
+                         i {
+                            font-size: 0;
+                            width: 12px;
+                            height: 12px;
+                            background-color: $c-primary;
+                            margin-right: $s-intern / 2;
+                        }
                     }
                     .entity_stats {
                         width: 100%;
                         .entity_stat {
                             display: flex;
-                            flex-direction: column;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            .entity_stat_label {
+                                font-size: .75rem;
+                                text-align: right;
+                                color: $c-white;
+                                width: 40px;
+                            }
                             .entity_stat_bar {
+                                display: block;
                                 position: relative;
                                 height: 4px;
                                 border-radius: 4px;
-                                width: 100%;
+                                width: calc(100% - 40px - $s-intern / 2);
                                 &.--health {
-
+                                    background-color: $c-health;
                                 }
                                 &.--armor {
-
+                                    background-color: $c-armor;
                                 }
                                 &.--mana {
-
+                                    background-color: $c-mana;
                                 }
                             }
                         }
@@ -153,20 +178,55 @@ $s-intern: 15px; // Container inner spacing
     // 
     // Chat box
     #chat_box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: $s-intern;
         #chat_box_chat {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 40px - $s-intern);
+            background-color: $c-black;
+            border-radius: $b-radius;
             .chat_box_help {
-
+                position: absolute;
+                top: $s-intern;
+                right: $s-intern;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $c-white;
+                font-weight: bold;
+                border: none;
             }
         }
         input[type=text] {
-
+            height: 40px;
+            width: calc(100% - 30px - $s-intern);
+            border-radius: $b-radius;
+            background-color: $c-dark;
+            border: none;
+            padding: $s-intern / 2;
+            color: $c-white;
+            &:focus {
+                outline: none;
+            }
         }
         label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 28px;
+            margin: 6px 0;
+            width: 28px;
+            background-color: $c-white;
+            border-radius: 50%;
             i {
 
             }
             input[type=file] {
-
+                width: 0px;
+                height: 0px;
             }
         }
     }
